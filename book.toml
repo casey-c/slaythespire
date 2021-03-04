@@ -1,0 +1,9 @@
+[book]
+authors = ["casey"]
+language = "en"
+multilingual = false
+src = "src"
+title = "ojb's Slay the Spire Mods"
+
+[output.html]
+default-theme = "ayu"
