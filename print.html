@@ -1,0 +1,335 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js ayu">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>ojb's Slay the Spire Mods</title>
+        
+        <meta name="robots" content="noindex" />
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "ayu";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="overview.html">Overview</a></li><li class="chapter-item expanded affix "><a href="installation.html">Installation Help</a></li><li class="chapter-item expanded "><a href="all_mods.html"><strong aria-hidden="true">1.</strong> List of Mods</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="bestiary.html"><strong aria-hidden="true">1.1.</strong> Bestiary</a></li><li class="chapter-item expanded "><a href="darkmap.html"><strong aria-hidden="true">1.2.</strong> Dark Map</a></li><li class="chapter-item expanded "><a href="filterthespire.html"><strong aria-hidden="true">1.3.</strong> Filter the Spire</a></li><li class="chapter-item expanded "><a href="infomod.html"><strong aria-hidden="true">1.4.</strong> InfoMod</a></li></ol></li><li class="chapter-item expanded "><a href="tutorials.html"><strong aria-hidden="true">2.</strong> Tutorials</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu (default)</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">ojb's Slay the Spire Mods</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="overview"><a class="header" href="#overview">Overview</a></h1>
+<p>Hello - welcome to my site! In here you'll find a curated collection of some of the mods I've developed and polished enough for &quot;official&quot; releases. These are the mods that I've found worthwhile enough for general audiences - but it is far from the bulk of the mods I've developed! Most of my more experimental mods exist hidden away in my <a href="https://github.com/casey-c/repositories">Github repositories</a>, but very few of them are intended for regular use. </p>
+<p>As I continue polishing up and releasing these ongoing projects, I'll update this site to serve as a decent hub of information about all the mods I've created. You can navigate this site using the table of contents on the left pane or use the arrow keys on your keyboard to ← navigate → between pages.</p>
+<h1 id="installing-my-mods"><a class="header" href="#installing-my-mods">Installing My Mods</a></h1>
+<hr />
+<p><strong>These instructions are for Github releases only</strong></p>
+<p>If you see a Steam Workshop link - use that instead! It will simplifiy the process greatly and you won't have to manually download and update my mods. </p>
+<hr />
+<p>If I haven't yet released a Workshop link, it's likely that I didn't feel the mod to be polished / ready enough for a full release (e.g. having issues like not scaling nicely for non 1080p displays, performance hiccups or crashes, or otherwise buggy or incomplete behavior). So if you're following these instructions, it's probably for one of my more experimental / in development mods. I still accept bug reports for these mods, but there's a lot of projects that are abandoned due to time constraints that I may never get to them. </p>
+<p>With that disclaimer out of the way, here's how to install Slay the Spire mods:</p>
+<h2 id="quick-instructions"><a class="header" href="#quick-instructions">Quick Instructions</a></h2>
+<ol>
+<li>
+<p>Make sure to obtain and enable <a href="https://steamcommunity.com/workshop/filedetails/?id=1605060445">ModTheSpire</a> and <a href="https://steamcommunity.com/workshop/filedetails/?id=1605833019">BaseMod</a>.</p>
+</li>
+<li>
+<p>Download the latest 
+<code>.JAR</code> 
+file from the releases page of the mod.</p>
+</li>
+<li>
+<p>Place the 
+<code>(modname).JAR</code>
+into your 
+<code>SlayTheSpire/mods</code>
+folder</p>
+</li>
+<li>
+<p>Launch the game with mods, and be sure to enable ✓ both BaseMod and my mod(s).</p>
+</li>
+</ol>
+<hr />
+<h2 id="detailed-instructions-if-the-above-instructions-didnt-make-sense"><a class="header" href="#detailed-instructions-if-the-above-instructions-didnt-make-sense">Detailed Instructions (if the above instructions didn't make sense)</a></h2>
+<ol>
+<li>Download <a href="https://steamcommunity.com/workshop/filedetails/?id=1605060445">ModTheSpire</a> and <a href="https://steamcommunity.com/workshop/filedetails/?id=1605833019">BaseMod</a>. These mods are available from the Steam Workshop and are are <em>REQUIRED</em> libraries that my mods use to function correctly. If you don't have them installed and enabled, your game will not even load, so get them!</li>
+</ol>
+<p>You should <em>subscribe</em> to them on Steam and it will automatically download and keep them updated for you.</p>
+<p><em>NOTE: If you don't have access to the Steam Workshop (e.g. from a non-steam copy of the game), there are ways to download those files anyway. Search for &quot;steam workshop downloader&quot; on your friendly, neighborhood search engine - although the rest is up to you to figure out.</em></p>
+<ol start="2">
+<li>Download the latest version of one of my mods. You can find it on the Github releases page for the particular mod. </li>
+</ol>
+<p><em>Ex: for <strong>InfoMod</strong>, the main page is <a href="https://github.com/casey-c/infomod2">https://github.com/casey-c/infomod2</a> and then the releases page is <a href="https://github.com/casey-c/infomod2/releases">https://github.com/casey-c/infomod2/releases</a>. You'll need to download the latest .JAR file from the releases page (<code>InfoMod2.jar</code>) to get what you need to run my mod.</em></p>
+<ol start="3">
+<li>Place the downloaded .JAR file (as is, don't extract it or anything) directly into your <code>SlayTheSpire/mods</code> folder. This folder is operating system dependent and may have to be created if it doesn't exist. The main game executable is located on Windows somewhere like: </li>
+</ol>
+<p><code>C:/Program Files (x76)/Steam/steamapps/common/SlayTheSpire/</code></p>
+<p>From there, you'll either need to create a <code>mods</code> subfolder or place the .JAR file directly into the one that already exists. For our <strong>InfoMod</strong> example, after we put it into the correct place, the full path on Windows will look something like:</p>
+<p><code>C:/Program Files (x76)/Steam/steamapps/common/SlayTheSpire/mods/InfoMod2.jar</code></p>
+<ol start="4">
+<li>Launch the game with mods. On Steam, you'll need to specifically choose &quot;Play with Mods&quot; when you launch the game. You'll get the ModTheSpire popup window which includes a list of all mods you've subscribed to or downloaded. Make sure to check ✓ the boxes next to BaseMod and my mods to enable them to start. Click the Play Game button to launch into Slay the Spire from there!</li>
+</ol>
+<hr />
+<p>If you have any issues getting mods to install, try Googling your problem - there's also a <a href="https://reddit.com/r/slaythespire/">SlayTheSpire subreddit</a> and an <a href="https://discord.gg/SlayTheSpire">official Discord</a> if you get stuck from there. Good luck and happy modding!</p>
+<h1 id="list-of-mods"><a class="header" href="#list-of-mods">List of Mods</a></h1>
+<p>Here's a collection of some of my more polished mods. Most of these have been uploaded to the Steam Workshop or have workshop releases planned for the near future.</p>
+<ul>
+<li><a href="./bestiary.html">Bestiary</a> - An overlay for each monster displaying their movesets and abilities</li>
+<li><a href="./darkmap.html">DarkMap</a> - Gives the map a dark theme for late night spire slayin'</li>
+<li><a href="./filterthespire.html">Filter the Spire</a> - Filter out Slay the Spire seeds for fun boss swap shenanigans</li>
+<li><a href="./infomod.html">InfoMod</a> - A comprehensive UI enhancement mod to give quick access to helpful information</li>
+</ul>
+<h1 id="bestiary"><a class="header" href="#bestiary">Bestiary</a></h1>
+<p>Links: <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2285965269">Steam Workshop</a>, <a href="https://github.com/casey-c/bestiary">Github</a></p>
+<p>Originally part of InfoMod but forked off into its own standalone mod, <strong>Bestiary</strong> is designed to present enemy abilities and movesets in a straightfoward and aesthetically pleasing overlay. The mod allows players to Shift+Right+Click an enemy in combat and pull up a convienient window displaying their patterns of attack, damage values, and probability distributions for their intents.</p>
+<p>Designed for all levels of play, <strong>Bestiary</strong> supports every ascension level and monster in the base game, and hides completely out of the way when unneeded. It is one of the few mods I've created that is also designed to be controller friendly -- letting players who don't like using mouse and keyboard get access to the information as well.</p>
+<p><img src="images/bestiary.png" alt="Bestiary screenshot" /></p>
+<h1 id="dark-map"><a class="header" href="#dark-map">Dark Map</a></h1>
+<p>Links: <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2348942418">Steam Workshop</a>, <a href="https://github.com/casey-c/darkmap">Github</a></p>
+<p>A simple UI mod to give the map a night time theme. This mod was originally built to improve my late night modding experience, but I realized that it would be useful for regular game play as well! It started off as a small offshoot of a map overhaul mod I had been working on but ended up being useful enough to release on its own.</p>
+<p>This mod also supports the <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1611666859">Colored Map mod</a> to enable further customization of node colors.</p>
+<p><img src="images/darkmap.png" alt="Darkmap screenshot" /></p>
+<h1 id="filter-the-spire"><a class="header" href="#filter-the-spire">Filter the Spire</a></h1>
+<p>Links: <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2279130265">Steam Workshop</a>, <a href="https://github.com/casey-c/filterthespire">Github</a></p>
+<p><strong>Filter the Spire</strong> lets you customize your Slay the Spire seeds before you start a game. The mod works as a vanilla friendly seed searching tool to help you customize which seeds you'll encounter in your runs. The main benefit to using this mod is that it actually searches for the seeds it tries to find! It doesn't just forcibly tweak a given seed to have your desired parameters, meaning you'll be able to share this seed with anyone else who wishes to play it!</p>
+<p>This mod only has a single filter at the moment - customizable Boss Swaps - but more filters are planned for future releases when I ever can find spare time to work on it again.</p>
+<p>Using this mod lets you choose to only have seeds where your Neow boss swap bonus is something like a guaranteed <em>Pandora's Box</em> or <em>Runic Pyramid</em> or perhaps only energy relics - or any other fun swaps you can think of!</p>
+<p><img src="images/filterthespire.png" alt="Filter the Spire screenshot" /></p>
+<h1 id="infomod"><a class="header" href="#infomod">InfoMod</a></h1>
+<p>Links: <a href="https://github.com/casey-c/infomod2">Github</a></p>
+<p><strong>InfoMod</strong> provides a clean, intuitive interface for displaying all the hidden or otherwise tedious to calculate information not shown by the base game. It is a UI enhancement mod that replaces unneccessary tool tips with beautiful, functional displays.</p>
+<p>From tracking potion drop chance, to question floor probabilities, to card drop chances and more - <strong>InfoMod</strong> gives players quick access to the information required to make high level choices, without needing to pull out a calculator!</p>
+<p>None of the information within <strong>InfoMod</strong> is unavailable without the mod - it doesn't provide cheaty insights into a run that you wouldn't be able to determine without it. It simply exists as a convienient and accessible extension to the base game interface to supply that information when needed.</p>
+<p><strong>InfoMod</strong>'s tool tip oriented design lets it stay uncluttered and out of the way when unneeded, providing a near vanilla experience but with the option to explore the maths in greater detail when desired.</p>
+<p><img src="images/infomod2.png" alt="InfoMod screenshot" /></p>
+<h1 id="tutorials"><a class="header" href="#tutorials">Tutorials</a></h1>
+<p>When I get some spare time, I plan on writing a collection of tutorials to hopefully make it easier for newcomers to get into modding. I want to write two major tutorials:</p>
+<ul>
+<li>Your First UI Mod - which will cover setting up the IDE, hooking into BaseMod, simple Prefix/Postfix/Instrument patches, and very basic rendering</li>
+<li>UI &quot;Best&quot; Practices - which will serve as an overview of the UI design principles I tend to follow and some thoughts on how/why I structure my recent mods the way I do. I want to cover things like iterating on a design in Inkscape, properly handling resolution scaling, a simple design pattern for composing Widgets, and discuss the logic behind the setup/display method I use to render the graphical pieces of my mods.</li>
+</ul>
+<p>Beyond those two major guides, I may include smaller blog-style articles describing problems I've run into and solutions I've come up with to solve them.</p>
+<p>Unfortunately, I'm in the process of job hunting at the moment (unemployment helped provide the situation to create these mods, but that was definitely not sustainable and I'm basically out of money/time to continue working on them), so these tutorials will be delayed a bit.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
